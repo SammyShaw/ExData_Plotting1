@@ -9,7 +9,7 @@ mlsubset<-mldata[mldata$Date %in% c("1/2/2007", "2/2/2007"), ]
 png("plot4.png", width=480, height=480)
 par(mfrow=c(2,2))
 # first
-with(mlsubset, hist(as.numeric(Global_active_power), main="Global Active Power", col="red", xlab="Global Active Power (kilowatts)"))
+plot(datetime, gap, type="line", ylab="Global Active Power (kilowatts)")
 # second
 plot(datetime, mlsubset$Voltage, type="l", ylab="Voltage")
 # third
